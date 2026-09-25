@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oil &amp; Gas English – ESL Course</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --navy: #1a3c5e;
+    --blue: #2e75b6;
+    --sky: #d4e9f7;
+    --amber: #e8a020;
+    --amber-light: #fef3dc;
+    --green: #2d7a4f;
+    --green-light: #e6f5ed;
+    --red: #c0392b;
+    --red-light: #fdecea;
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #1c2b3a;
+    --muted: #5a6e80;
+    --border: #dce6ef;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.65; }
+
+  /* HEADER */
+  .lesson-header {
+    background: var(--navy);
+    color: white;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+  .level-badge {
+    display: inline-block;
+    background: var(--amber);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .lesson-header h1 {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  .lesson-header p {
+    font-size: 15px;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  /* PROGRESS NAV */
+  .progress-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 100;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .progress-nav::-webkit-scrollbar { display: none; }
+  .nav-inner {
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+  }
+  .nav-item {
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-item:hover { color: var(--blue); border-color: var(--sky); }
+  .nav-item.active { color: var(--navy); border-color: var(--blue); font-weight: 600; }
+
+  /* MAIN LAYOUT */
+  .main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  /* SECTIONS */
+  .section {
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: var(--navy);
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .section-body { padding: 24px; }
+
+  /* VIDEO WRAPPER */
+  .video-block {
+    margin: 16px 0;
+  }
+  .video-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .video-label::before {
+    content: '▶';
+    background: var(--blue);
+    color: white;
+    border-radius: 4px;
+    width: 22px; height: 22px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 10px;
+  }
+
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+  .callout-info { background: var(--sky); border-left: 4px solid var(--blue); }
+  .callout-tip { background: var(--amber-light); border-left: 4px solid var(--amber); }
+  .callout-success { background: var(--green-light); border-left: 4px solid var(--green); }
+  .callout-title { font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+  .callout-info .callout-title { color: var(--blue); }
+  .callout-tip .callout-title { color: var(--amber); }
+  .callout-success .callout-title { color: var(--green); }
+
+  /* VOCABULARY TABLE */
+  .vocab-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .vocab-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .vocab-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .vocab-table tr:nth-child(even) td { background: #f0f5fa; }
+  .vocab-table tr:last-child td { border-bottom: none; }
+  .vocab-term { font-weight: 600; color: var(--navy); }
+
+  /* EXERCISE BOXES */
+  .exercise {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 18px 0;
+  }
+  .exercise-title {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ex-badge {
+    background: var(--blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .q-list { list-style: none; padding: 0; margin: 0; counter-reset: q; }
+  .q-list li {
+    counter-increment: q;
+    padding: 8px 0 8px 30px;
+    position: relative;
+    border-bottom: 1px dashed #dde3ea;
+    font-size: 14.5px;
+  }
+  .q-list li:last-child { border-bottom: none; }
+  .q-list li::before {
+    content: counter(q) ".";
+    position: absolute; left: 0;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 13px;
+    top: 10px;
+  }
+  .answer-line {
+    display: inline-block;
+    border-bottom: 1.5px solid var(--muted);
+    min-width: 180px;
+    margin: 0 4px;
+    color: transparent;
+    user-select: none;
+  }
+  .word-bank {
+    background: white;
+    border: 1.5px dashed var(--blue);
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: var(--navy);
+    font-style: italic;
+  }
+  .word-bank span { font-weight: 600; font-style: normal; color: var(--blue); margin-right: 4px; }
+
+  /* READING TEXT */
+  .reading-text {
+    background: #f8fafc;
+    border-left: 5px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 16px 0;
+    color: #2a3a4a;
+  }
+
+  /* ANSWER KEY */
+  .answer-key-header {
+    background: var(--red);
+    color: white;
+    padding: 14px 22px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px 8px 0 0;
+    margin-top: 40px;
+  }
+  .answer-key-body {
+    background: white;
+    border: 2px solid var(--red);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px;
+  }
+  .ans-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  .ans-table th { background: var(--red); color: white; padding: 8px 12px; text-align: left; font-size: 12px; }
+  .ans-table td { padding: 9px 12px; border-bottom: 1px solid #f0e8e8; vertical-align: top; }
+  .ans-table tr:nth-child(even) td { background: #fef8f8; }
+  .ans-answer { font-weight: 700; color: var(--green); }
+
+  /* DISCUSSION */
+  .discussion-card {
+    background: linear-gradient(135deg, #1a3c5e 0%, #2e75b6 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 16px 0;
+  }
+  .discussion-card h3 { margin: 0 0 12px; font-family: 'Source Serif 4', serif; font-size: 18px; }
+  .discussion-card ol { margin: 0; padding-left: 20px; line-height: 2; font-size: 15px; opacity: 0.95; }
+
+  h3 { color: var(--navy); font-size: 16px; margin: 20px 0 8px; }
+  p { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; margin: 8px 0 14px; }
+  li { margin-bottom: 6px; font-size: 14.5px; }
+  strong { color: var(--navy); }
+
+  @media (max-width: 600px) {
+    .vocab-table th:last-child, .vocab-table td:last-child { display: none; }
+    .section-body { padding: 16px; }
+  }
+
+  .video-thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .video-thumb-wrap a {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    text-decoration: none;
+  }
+  .video-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px; height: 72px;
+    background: rgba(255,0,0,0.92);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .video-thumb-wrap:hover .video-play-btn {
+    background: #ff0000;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  .video-play-btn svg { margin-left: 5px; }
+  .video-open-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-align: center;
+  }
+
+
+
+  
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.65; }
+
+  .lesson-header { background: var(--navy); color: white; padding: 52px 24px 44px; text-align: center; position: relative; overflow: hidden; }
+  .lesson-header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; background: rgba(29,111,164,0.25); border-radius: 50%; }
+  .lesson-header::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 240px; height: 240px; background: rgba(29,111,164,0.15); border-radius: 50%; }
+  .level-badge { display: inline-block; background: var(--teal); color: white; font-size: 12px; font-weight: 600; letter-spacing: 1px; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; position: relative; z-index: 1; }
+  .lesson-num { display: inline-block; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 8px; margin-left: 8px; position: relative; z-index: 1; }
+  .lesson-header h1 { font-family: 'Source Serif 4', serif; font-size: clamp(24px, 5vw, 40px); font-weight: 700; margin: 0 0 10px; line-height: 1.2; position: relative; z-index: 1; }
+  .lesson-header p { font-size: 14px; opacity: 0.75; margin: 0; position: relative; z-index: 1; }
+
+  .progress-nav { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100; overflow-x: auto; scrollbar-width: none; }
+  .progress-nav::-webkit-scrollbar { display: none; }
+  .nav-inner { display: flex; width: max-content; min-width: 100%; }
+  .nav-item { padding: 13px 18px; font-size: 12.5px; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s; }
+  .nav-item:hover { color: var(--blue); }
+  .nav-item.active { color: var(--navy); border-color: var(--blue); font-weight: 600; }
+
+  .main { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  .section { background: var(--surface); border-radius: 10px; border: 1px solid var(--border); margin-bottom: 28px; overflow: hidden; }
+  .section-header { background: var(--navy); color: white; padding: 18px 24px; display: flex; align-items: center; gap: 14px; }
+  .section-num { background: rgba(255,255,255,0.15); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+  .section-header h2 { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 700; margin: 0; }
+  .section-body { padding: 24px; }
+
+  .video-block { margin: 16px 0; }
+  .video-label { font-size: 13px; font-weight: 600; color: var(--blue); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .video-label::before { content: '▶'; background: var(--blue); color: white; border-radius: 4px; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; }
+
+
+  .callout { border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 15px; }
+  .callout-info { background: var(--sky); border-left: 4px solid var(--blue); }
+  .callout-tip { background: var(--amber-light); border-left: 4px solid var(--amber); }
+  .callout-teal { background: var(--teal-light); border-left: 4px solid var(--teal); }
+  .callout-title { font-weight: 700; font-size: 12px; letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase; }
+  .callout-info .callout-title { color: var(--blue); }
+  .callout-tip .callout-title { color: var(--amber); }
+  .callout-teal .callout-title { color: var(--teal); }
+
+  .vocab-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .vocab-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 11.5px; font-weight: 600; letter-spacing: 0.3px; }
+  .vocab-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .vocab-table tr:nth-child(even) td { background: #f0f5fa; }
+  .vocab-table tr:last-child td { border-bottom: none; }
+  .vocab-term { font-weight: 700; color: var(--navy); }
+
+  .exercise { background: #f7fafc; border: 1px solid var(--border); border-radius: 8px; padding: 20px 22px; margin: 18px 0; }
+  .exercise-title { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .ex-badge { background: var(--blue); color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .q-list { list-style: none; padding: 0; margin: 0; counter-reset: q; }
+  .q-list li { counter-increment: q; padding: 9px 0 9px 32px; position: relative; border-bottom: 1px dashed #dde3ea; font-size: 14.5px; }
+  .q-list li:last-child { border-bottom: none; }
+  .q-list li::before { content: counter(q) "."; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 13px; top: 11px; }
+  .answer-line { display: inline-block; border-bottom: 1.5px solid var(--muted); min-width: 160px; margin: 0 4px; color: transparent; user-select: none; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .col-box { background: #f7fafc; border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; }
+  .col-box h4 { margin: 0 0 10px; color: var(--navy); font-size: 14px; }
+
+  .phase-card { border-radius: 8px; padding: 16px 20px; margin: 12px 0; border-left: 5px solid; }
+  .phase-card h4 { margin: 0 0 6px; font-size: 14px; font-weight: 700; }
+  .phase-card p { margin: 0; font-size: 14px; }
+
+  .reading-text { background: #f7fafc; border-left: 5px solid var(--blue); border-radius: 0 8px 8px 0; padding: 18px 22px; font-family: 'Source Serif 4', serif; font-size: 15.5px; line-height: 1.8; margin: 16px 0; }
+
+  .answer-key-header { background: var(--red); color: white; padding: 14px 22px; font-weight: 700; font-size: 16px; display: flex; align-items: center; gap: 10px; border-radius: 8px 8px 0 0; margin-top: 40px; }
+  .answer-key-body { background: white; border: 2px solid var(--red); border-top: none; border-radius: 0 0 8px 8px; padding: 20px 24px; }
+  .ans-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  .ans-table th { background: var(--red); color: white; padding: 8px 12px; text-align: left; font-size: 12px; }
+  .ans-table td { padding: 9px 12px; border-bottom: 1px solid #f0e8e8; vertical-align: top; }
+  .ans-table tr:nth-child(even) td { background: #fef8f8; }
+  .ans-answer { font-weight: 700; color: var(--green); }
+
+  h3 { color: var(--navy); font-size: 16px; margin: 20px 0 8px; }
+  h4 { color: var(--navy); font-size: 14px; margin: 12px 0 6px; }
+  p { margin: 0 0 12px; font-size: 15px; }
+  ul, ol { padding-left: 22px; margin: 8px 0 14px; }
+  li { margin-bottom: 6px; font-size: 14.5px; }
+  strong { color: var(--navy); }
+
+  @media (max-width: 620px) {
+    .two-col { grid-template-columns: 1fr; }
+    .vocab-table th:last-child, .vocab-table td:last-child { display: none; }
+    .section-body { padding: 16px; }
+  }
+
+  .video-thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .video-thumb-wrap a {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    text-decoration: none;
+  }
+  .video-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px; height: 72px;
+    background: rgba(255,0,0,0.92);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .video-thumb-wrap:hover .video-play-btn {
+    background: #ff0000;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  .video-play-btn svg { margin-left: 5px; }
+  .video-open-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-align: center;
+  }
+
+
+
+  
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.65; }
+
+  .lesson-header { background: linear-gradient(160deg, #0c2340 0%, #1458a0 100%); color: white; padding: 52px 24px 44px; text-align: center; position: relative; overflow: hidden; }
+  .lesson-header::before { content: '⚙'; position: absolute; right: 8%; top: 10%; font-size: 140px; opacity: 0.06; line-height: 1; }
+  .lesson-header::after { content: '🛢'; position: absolute; left: 6%; bottom: 5%; font-size: 120px; opacity: 0.06; line-height: 1; }
+  .badge-row { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; position: relative; z-index: 1; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.8px; padding: 4px 14px; border-radius: 20px; }
+  .badge-blue { background: var(--blue); color: white; }
+  .badge-steel { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85); }
+  .lesson-header h1 { font-family: 'Source Serif 4', serif; font-size: clamp(24px, 5vw, 40px); font-weight: 700; margin: 0 0 10px; line-height: 1.2; position: relative; z-index: 1; }
+  .lesson-header p { font-size: 14px; opacity: 0.7; margin: 0; position: relative; z-index: 1; }
+
+  .progress-nav { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100; overflow-x: auto; scrollbar-width: none; }
+  .progress-nav::-webkit-scrollbar { display: none; }
+  .nav-inner { display: flex; width: max-content; min-width: 100%; }
+  .nav-item { padding: 13px 18px; font-size: 12.5px; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s; }
+  .nav-item:hover { color: var(--blue); }
+  .nav-item.active { color: var(--navy); border-color: var(--blue); font-weight: 600; }
+
+  .main { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  .section { background: var(--surface); border-radius: 10px; border: 1px solid var(--border); margin-bottom: 28px; overflow: hidden; }
+  .section-header { background: var(--navy); color: white; padding: 18px 24px; display: flex; align-items: center; gap: 14px; }
+  .section-num { background: rgba(255,255,255,0.15); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+  .section-header h2 { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 700; margin: 0; }
+  .section-body { padding: 24px; }
+
+  .video-block { margin: 16px 0; }
+  .video-label { font-size: 13px; font-weight: 600; color: var(--blue); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .video-label::before { content: '▶'; background: var(--blue); color: white; border-radius: 4px; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; }
+
+
+  .callout { border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 15px; }
+  .callout-info { background: var(--sky); border-left: 4px solid var(--blue); }
+  .callout-tip { background: var(--amber-light); border-left: 4px solid var(--amber); }
+  .callout-danger { background: var(--red-light); border-left: 4px solid var(--red); }
+  .callout-orange { background: var(--orange-light); border-left: 4px solid var(--orange); }
+  .callout-green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .callout-title { font-weight: 700; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .callout-info .callout-title { color: var(--blue); }
+  .callout-tip .callout-title { color: var(--amber); }
+  .callout-danger .callout-title { color: var(--red); }
+  .callout-orange .callout-title { color: var(--orange); }
+  .callout-green .callout-title { color: var(--green); }
+
+  .vocab-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .vocab-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 11.5px; font-weight: 600; }
+  .vocab-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .vocab-table tr:nth-child(even) td { background: #f0f5fa; }
+  .vocab-table tr:last-child td { border-bottom: none; }
+  .vocab-term { font-weight: 700; color: var(--navy); }
+
+  .exercise { background: #f7fafc; border: 1px solid var(--border); border-radius: 8px; padding: 20px 22px; margin: 18px 0; }
+  .exercise-title { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .ex-badge { background: var(--blue); color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .q-list { list-style: none; padding: 0; margin: 0; counter-reset: q; }
+  .q-list li { counter-increment: q; padding: 9px 0 9px 32px; position: relative; border-bottom: 1px dashed #dde3ea; font-size: 14.5px; }
+  .q-list li:last-child { border-bottom: none; }
+  .q-list li::before { content: counter(q) "."; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 13px; top: 11px; }
+  .answer-line { display: inline-block; border-bottom: 1.5px solid var(--muted); min-width: 160px; margin: 0 4px; color: transparent; user-select: none; }
+
+  /* PHASE CARDS */
+  .phases { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+  .phase { display: flex; gap: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .phase-num { width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: white; flex-shrink: 0; }
+  .phase-content { padding: 14px 18px; flex: 1; }
+  .phase-content h4 { margin: 0 0 4px; font-size: 14px; font-weight: 700; }
+  .phase-content p { margin: 0; font-size: 14px; line-height: 1.6; }
+  .phase-1 .phase-num { background: #1458a0; }
+  .phase-2 .phase-num { background: #0d7377; }
+  .phase-3 .phase-num { background: #256040; }
+  .phase-4 .phase-num { background: #c07820; }
+  .phase-5 .phase-num { background: #b02820; }
+  .phase-1 { border-color: #1458a0; }
+  .phase-2 { border-color: #0d7377; }
+  .phase-3 { border-color: #256040; }
+  .phase-4 { border-color: #c07820; }
+  .phase-5 { border-color: #b02820; }
+  .phase-1 .phase-content { background: #e8f0fb; }
+  .phase-2 .phase-content { background: #e0f5f5; }
+  .phase-3 .phase-content { background: #e2f3ea; }
+  .phase-4 .phase-content { background: #fef3dc; }
+  .phase-5 .phase-content { background: #fdecea; }
+
+  /* FLOW DIAGRAM */
+  .flow-diagram { display: flex; align-items: center; gap: 0; margin: 16px 0; flex-wrap: wrap; }
+  .flow-step { background: var(--navy); color: white; border-radius: 8px; padding: 12px 14px; text-align: center; font-size: 12px; font-weight: 600; min-width: 100px; flex: 1; }
+  .flow-step span { display: block; font-size: 10px; font-weight: 400; opacity: 0.7; margin-top: 4px; }
+  .flow-arrow { font-size: 18px; color: var(--blue); padding: 0 6px; flex-shrink: 0; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .col-box { background: #f7fafc; border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; }
+  .col-box h4 { margin: 0 0 10px; color: var(--navy); font-size: 14px; }
+
+  .answer-key-header { background: var(--red); color: white; padding: 14px 22px; font-weight: 700; font-size: 16px; display: flex; align-items: center; gap: 10px; border-radius: 8px 8px 0 0; margin-top: 40px; }
+  .answer-key-body { background: white; border: 2px solid var(--red); border-top: none; border-radius: 0 0 8px 8px; padding: 20px 24px; }
+  .ans-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  .ans-table th { background: var(--red); color: white; padding: 8px 12px; text-align: left; font-size: 12px; }
+  .ans-table td { padding: 9px 12px; border-bottom: 1px solid #f0e8e8; vertical-align: top; }
+  .ans-table tr:nth-child(even) td { background: #fef8f8; }
+  .ans-answer { font-weight: 700; color: var(--green); }
+
+  h3 { color: var(--navy); font-size: 16px; margin: 20px 0 8px; }
+  h4 { color: var(--navy); font-size: 14px; margin: 12px 0 6px; }
+  p { margin: 0 0 12px; font-size: 15px; }
+  ul, ol { padding-left: 22px; margin: 8px 0 14px; }
+  li { margin-bottom: 6px; font-size: 14.5px; }
+  strong { color: var(--navy); }
+
+  @media (max-width: 640px) {
+    .flow-diagram { flex-direction: column; align-items: stretch; }
+    .flow-arrow { transform: rotate(90deg); text-align: center; }
+    .two-col { grid-template-columns: 1fr; }
+    .vocab-table th:last-child, .vocab-table td:last-child { display: none; }
+    .section-body { padding: 16px; }
+  }
+
+  .video-thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .video-thumb-wrap a {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    text-decoration: none;
+  }
+  .video-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px; height: 72px;
+    background: rgba(255,0,0,0.92);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .video-thumb-wrap:hover .video-play-btn {
+    background: #ff0000;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  .video-play-btn svg { margin-left: 5px; }
+  .video-open-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-align: center;
+  }
+
+
+
+/* ── SINGLE-FILE APP SHELL ──────────────────────────────── */
+.lesson-page { display: none; }
+.lesson-page.active { display: block; }
+
+/* ── COURSE HOME ────────────────────────────────────────── */
+.home-page { display: block; }
+.home-page.hidden { display: none; }
+
+/* TOP COURSE NAV */
+.course-topbar {
+  background: #0a1e30;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 200;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 2px solid #1d6fa4;
+}
+.course-topbar::-webkit-scrollbar { display: none; }
+.course-logo {
+  font-family: 'Source Serif 4', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+  padding: 14px 20px 14px 0;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  margin-right: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.course-logo:hover { color: #5bbfea; }
+.course-logo span { color: #5bbfea; }
+.topbar-btn {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+  user-select: none;
+}
+.topbar-btn:hover { color: white; }
+.topbar-btn.active { color: white; border-bottom-color: #1d6fa4; font-weight: 600; }
+.topbar-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 8px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.tb-b1 { background: #256040; color: white; }
+.tb-b2 { background: #1d6fa4; color: white; }
+
+/* ── HERO ───────────────────────────────────────────────── */
+.hero {
+  background: #0f2a45;
+  color: white;
+  padding: 56px 24px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before { content: '🛢'; position: absolute; top: -20px; left: 5%; font-size: 200px; opacity: 0.05; line-height: 1; pointer-events: none; }
+.hero::after { content: '⚙'; position: absolute; bottom: -30px; right: 4%; font-size: 220px; opacity: 0.05; line-height: 1; pointer-events: none; }
+.hero-tag { display: inline-block; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 600; letter-spacing: 1px; padding: 5px 16px; border-radius: 20px; margin-bottom: 18px; }
+.hero h1 { font-family: 'Source Serif 4', serif; font-size: clamp(28px, 6vw, 50px); font-weight: 700; margin: 0 0 12px; line-height: 1.15; }
+.hero h1 span { color: #5bbfea; }
+.hero p { font-size: clamp(14px, 2.5vw, 17px); opacity: 0.72; margin: 0 auto; max-width: 520px; }
+
+.stats { background: #1d6fa4; display: flex; justify-content: center; flex-wrap: wrap; }
+.stat { padding: 14px 28px; text-align: center; color: white; border-right: 1px solid rgba(255,255,255,0.15); }
+.stat:last-child { border-right: none; }
+.stat-num { font-size: 20px; font-weight: 700; line-height: 1; }
+.stat-label { font-size: 11px; opacity: 0.7; margin-top: 3px; }
+
+/* ── HOME CARDS ─────────────────────────────────────────── */
+.home-main { max-width: 860px; margin: 0 auto; padding: 40px 20px 72px; }
+.home-section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1d6fa4; margin-bottom: 6px; }
+.home-section-title { font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 700; color: #0f2a45; margin: 0 0 24px; }
+
+.lesson-cards { display: flex; flex-direction: column; gap: 16px; }
+.lcard {
+  background: white;
+  border: 1px solid #d4e0ec;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+  user-select: none;
+}
+.lcard:hover { box-shadow: 0 6px 24px rgba(15,42,69,0.12); transform: translateY(-2px); }
+.lcard-accent { width: 6px; flex-shrink: 0; }
+.lcard-body { padding: 20px 24px; flex: 1; display: flex; align-items: center; gap: 20px; }
+.lcard-icon { font-size: 36px; flex-shrink: 0; line-height: 1; }
+.lcard-info { flex: 1; }
+.lcard-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; flex-wrap: wrap; }
+.lcard-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+.lb-b1 { background: #e3f5ea; color: #256040; }
+.lb-b2 { background: #d0e8f7; color: #1d6fa4; }
+.lb-num { background: #f0f4f8; color: #526070; }
+.lcard-info h3 { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 700; color: #0f2a45; margin: 0 0 5px; }
+.lcard-info p { font-size: 13px; color: #526070; margin: 0 0 10px; line-height: 1.5; }
+.lcard-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ltag { font-size: 11px; color: #526070; background: #f0f4f8; border: 1px solid #d4e0ec; padding: 2px 8px; border-radius: 5px; }
+.lcard-arrow { font-size: 22px; color: #d4e0ec; flex-shrink: 0; transition: color 0.2s, transform 0.2s; }
+.lcard:hover .lcard-arrow { color: #1d6fa4; transform: translateX(3px); }
+
+.how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px; }
+.how-card { background: white; border: 1px solid #d4e0ec; border-radius: 10px; padding: 18px; }
+.how-icon { font-size: 26px; margin-bottom: 8px; }
+.how-card h4 { font-size: 13px; font-weight: 700; color: #0f2a45; margin: 0 0 5px; }
+.how-card p { font-size: 12px; color: #526070; margin: 0; line-height: 1.5; }
+
+hr.divider { border: none; border-top: 1px solid #d4e0ec; margin: 40px 0; }
+
+/* ── LESSON INNER NAV (per-lesson section nav) ──────────── */
+.lesson-subnav {
+  background: white;
+  border-bottom: 1px solid #d4e0ec;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.lesson-subnav::-webkit-scrollbar { display: none; }
+.lesson-subnav .nav-inner { display: flex; width: max-content; min-width: 100%; }
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+  transition: color 0.2s;
+  margin-right: 4px;
+}
+.back-btn:hover { color: white; }
+
+@media (max-width: 600px) {
+  .lcard-body { gap: 12px; padding: 16px; }
+  .lcard-icon { font-size: 28px; }
+  .lcard-info h3 { font-size: 15px; }
+  .lcard-arrow { display: none; }
+  .stat { padding: 12px 16px; }
+  .main { padding: 20px 14px 60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     TOP NAVIGATION BAR (always visible)
+════════════════════════════════════════════════════════ -->
+<div class="course-topbar" id="topbar">
+  <div class="course-logo" onclick="showHome()">Oil &amp; Gas <span>English</span></div>
+  <div class="topbar-btn active" id="tab-home" onclick="showHome()">🏠 Home</div>
+  <div class="topbar-btn" id="tab-b1" onclick="showLesson('b1')">Lesson 1 <span class="topbar-badge tb-b1">B1</span></div>
+  <div class="topbar-btn" id="tab-b2l1" onclick="showLesson('b2l1')">Lesson 2 <span class="topbar-badge tb-b2">B2</span></div>
+  <div class="topbar-btn" id="tab-b2l2" onclick="showLesson('b2l2')">Lesson 3 <span class="topbar-badge tb-b2">B2</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════════════════════ -->
+<div class="home-page" id="home">
+
+  <header class="hero">
+    <div class="hero-tag">ESL Course · English for the Energy Sector</div>
+    <h1>Oil &amp; Gas <span>English</span></h1>
+    <p>Three interactive lessons introducing students to petroleum, natural gas, and how offshore platforms operate.</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Lessons</div></div>
+    <div class="stat"><div class="stat-num">B1 · B2</div><div class="stat-label">CEFR Levels</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Videos</div></div>
+    <div class="stat"><div class="stat-num">~4 hrs</div><div class="stat-label">Total content</div></div>
+  </div>
+
+  <main class="home-main">
+    <div class="home-section-label">Course lessons</div>
+    <div class="home-section-title">Choose your lesson</div>
+
+    <div class="lesson-cards">
+      <div class="lcard" onclick="showLesson('b1')">
+        <div class="lcard-accent" style="background:#256040;"></div>
+        <div class="lcard-body">
+          <div class="lcard-icon">🌍</div>
+          <div class="lcard-info">
+            <div class="lcard-meta">
+              <span class="lcard-badge lb-b1">B1 — Intermediate</span>
+            </div>
+            <h3>Oil &amp; Natural Gas: An Introduction</h3>
+            <p>Discover how oil and natural gas are formed, where they come from, and how they power our world.</p>
+            <div class="lcard-tags">
+              <span class="ltag">⏱ 60–75 min</span>
+              <span class="ltag">📹 2 videos</span>
+              <span class="ltag">📝 Vocabulary · True/False · Fill in the blank</span>
+              <span class="ltag">✦ Answer key</span>
+            </div>
+          </div>
+          <div class="lcard-arrow">›</div>
+        </div>
+      </div>
+
+      <div class="lcard" onclick="showLesson('b2l1')">
+        <div class="lcard-accent" style="background:#1d6fa4;"></div>
+        <div class="lcard-body">
+          <div class="lcard-icon">⛽</div>
+          <div class="lcard-info">
+            <div class="lcard-meta">
+              <span class="lcard-badge lb-b2">B2 — Upper Intermediate</span>
+              <span class="lcard-badge lb-num">Lesson 2 of 3</span>
+            </div>
+            <h3>From the Earth to the Refinery</h3>
+            <p>Explore the upstream sector, crude oil benchmarks, and the journey from reservoir to refinery.</p>
+            <div class="lcard-tags">
+              <span class="ltag">⏱ 75–90 min</span>
+              <span class="ltag">📹 2 videos</span>
+              <span class="ltag">📝 Word forms · Industry text · Extended writing</span>
+              <span class="ltag">✦ Answer key</span>
+            </div>
+          </div>
+          <div class="lcard-arrow">›</div>
+        </div>
+      </div>
+
+      <div class="lcard" onclick="showLesson('b2l2')">
+        <div class="lcard-accent" style="background:#c07820;"></div>
+        <div class="lcard-body">
+          <div class="lcard-icon">🏗</div>
+          <div class="lcard-info">
+            <div class="lcard-meta">
+              <span class="lcard-badge lb-b2">B2 — Upper Intermediate</span>
+              <span class="lcard-badge lb-num">Lesson 3 of 3</span>
+            </div>
+            <h3>Drilling Down: Platforms &amp; Operations</h3>
+            <p>Offshore drilling, platform life cycles, the Deepwater Horizon case study, and professional writing.</p>
+            <div class="lcard-tags">
+              <span class="ltag">⏱ 75–90 min</span>
+              <span class="ltag">📹 2 videos</span>
+              <span class="ltag">📝 Collocations · Passive voice · Briefing note</span>
+              <span class="ltag">✦ Answer key</span>
+            </div>
+          </div>
+          <div class="lcard-arrow">›</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="home-section-label">For teachers</div>
+    <div class="home-section-title" style="margin-bottom:10px;">How to use this course</div>
+    <div class="how-grid">
+      <div class="how-card"><div class="how-icon">🎯</div><h4>Start with B1</h4><p>Use Lesson 1 as a standalone intro or warm-up before the B2 sequence. Works well as a 60-minute class.</p></div>
+      <div class="how-card"><div class="how-icon">📹</div><h4>Videos open on YouTube</h4><p>Click any video thumbnail to open it on YouTube in a new tab. Turn on subtitles (CC) in the YouTube player.</p></div>
+      <div class="how-card"><div class="how-icon">✦</div><h4>Answer keys at the bottom</h4><p>Each lesson has a full teacher's answer key. Scroll down or use the section navigation bar to jump to it.</p></div>
+      <div class="how-card"><div class="how-icon">🖨</div><h4>Print any lesson</h4><p>Use Ctrl+P / Cmd+P to print any lesson as a worksheet. The layout is optimised for A4 paper.</p></div>
+    </div>
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     LESSON B1
+════════════════════════════════════════════════════════ -->
+<div class="lesson-page" id="lesson-b1">
+  <header class="lesson-header">
+    <div class="level-badge">ESL · LEVEL B1</div>
+    <h1>Oil &amp; Natural Gas:<br>An Introduction</h1>
+    <p>Videos: Oil 101 &amp; Natural Gas 101 &nbsp;·&nbsp; Duration: 60–75 minutes</p>
+  </header>
+  <nav class="lesson-subnav">
+    <div class="nav-inner">
+      
+    <a class="nav-item active" href="#b1-warmup">1 Warm-Up</a>
+    <a class="nav-item" href="#b1-vocab">2 Vocabulary</a>
+    <a class="nav-item" href="#b1-video1">3 Oil 101</a>
+    <a class="nav-item" href="#b1-video2">4 Natural Gas 101</a>
+    <a class="nav-item" href="#b1-reading">5 Reading</a>
+    <a class="nav-item" href="#b1-discussion">6 Discussion</a>
+    <a class="nav-item" href="#b1-answerkey">✦ Answer Key</a>
+  
+    </div>
+  </nav>
+  <main class="main">
+
+  <!-- OBJECTIVES -->
+  <div class="callout callout-info" style="margin-bottom:24px;">
+    <div class="callout-title">Learning Objectives</div>
+    By the end of this lesson you will be able to: understand key vocabulary related to oil and natural gas · describe how fossil fuels are formed and extracted · identify main uses and environmental impacts · understand authentic English-language educational videos on this topic.
+  </div>
+
+  <!-- 1. WARM-UP -->
+  <div class="section" id="b1-warmup">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Warm-Up — Think &amp; Discuss</h2>
+    </div>
+    <div class="section-body">
+      <p>Look at the questions below. Discuss with a partner or write your answers before you start the lesson.</p>
+      <ol>
+        <li>Do you use gas or oil at home? For what? (cooking, heating, transport…)</li>
+        <li>Where do you think oil comes from?</li>
+        <li>Can you name three products made from oil?</li>
+      </ol>
+      <div class="callout callout-tip">
+        <div class="callout-title">Did you know?</div>
+        The world uses approximately <strong>100 million barrels of oil every single day</strong>. One barrel contains about 159 litres.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. VOCABULARY -->
+  <div class="section" id="b1-vocab">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Key Vocabulary</h2>
+    </div>
+    <div class="section-body">
+      <p>Study these words carefully before watching the videos.</p>
+      <table class="vocab-table">
+        <thead><tr><th>Word / Term</th><th>Definition</th><th>Example Sentence</th></tr></thead>
+        <tbody>
+          <tr><td class="vocab-term">petroleum / crude oil</td><td>A thick, dark liquid found underground, made of carbon and hydrogen</td><td>Petroleum is refined to make gasoline.</td></tr>
+          <tr><td class="vocab-term">hydrocarbon</td><td>A chemical compound made only of hydrogen and carbon atoms</td><td>Oil is made of hydrocarbon molecules.</td></tr>
+          <tr><td class="vocab-term">reservoir</td><td>An underground layer of rock that holds oil or gas</td><td>Geologists found a large oil reservoir.</td></tr>
+          <tr><td class="vocab-term">sedimentary rock</td><td>Rock formed from layers of sand and mud pressed together over millions of years</td><td>The oil was trapped under sedimentary rock.</td></tr>
+          <tr><td class="vocab-term">fossil fuel</td><td>A fuel (oil, gas, coal) formed from ancient living things</td><td>Oil is a fossil fuel.</td></tr>
+          <tr><td class="vocab-term">drilling</td><td>Making a deep hole in the ground to reach oil or gas</td><td>The company began drilling in the ocean.</td></tr>
+          <tr><td class="vocab-term">refinery</td><td>A factory that processes crude oil into usable products</td><td>The crude oil is sent to a refinery.</td></tr>
+          <tr><td class="vocab-term">methane (CH₄)</td><td>The main gas in natural gas</td><td>Methane is colorless and odorless.</td></tr>
+          <tr><td class="vocab-term">pipeline</td><td>A long tube used to transport oil or gas</td><td>Gas travels through pipelines to cities.</td></tr>
+          <tr><td class="vocab-term">greenhouse gas</td><td>A gas that traps heat in Earth's atmosphere (e.g. CO₂, methane)</td><td>Burning oil produces greenhouse gases.</td></tr>
+          <tr><td class="vocab-term">extraction</td><td>The process of removing oil or gas from the ground</td><td>Oil extraction requires special equipment.</td></tr>
+          <tr><td class="vocab-term">LNG</td><td>Natural gas cooled into liquid form for transport by ship</td><td>LNG tankers transport gas across oceans.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise A — Match the Word</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">A</span> Match each word (1–6) with the correct definition (a–f).</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;font-size:14px;">
+          <div>
+            <ol class="q-list" style="counter-reset:q 0;">
+              <li>petroleum</li><li>reservoir</li><li>refinery</li>
+              <li>pipeline</li><li>fossil fuel</li><li>greenhouse gas</li>
+            </ol>
+          </div>
+          <div>
+            <ol style="list-style-type:lower-alpha;padding-left:18px;margin:0;">
+              <li style="margin-bottom:8px;font-size:14px;">A factory that processes crude oil into useful products</li>
+              <li style="margin-bottom:8px;font-size:14px;">A gas that traps heat in Earth's atmosphere</li>
+              <li style="margin-bottom:8px;font-size:14px;">A long tube that carries oil or gas</li>
+              <li style="margin-bottom:8px;font-size:14px;">A thick dark liquid found underground</li>
+              <li style="margin-bottom:8px;font-size:14px;">A fuel formed from ancient living things</li>
+              <li style="margin-bottom:8px;font-size:14px;">An underground rock layer that stores oil or gas</li>
+            </ol>
+          </div>
+        </div>
+        <p style="margin:12px 0 0;font-size:13px;color:var(--muted);">Answers: 1 — ___ &nbsp; 2 — ___ &nbsp; 3 — ___ &nbsp; 4 — ___ &nbsp; 5 — ___ &nbsp; 6 — ___</p>
+      </div>
+
+      <h3>Exercise B — Fill in the Blank</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">B</span> Complete each sentence with the correct word from the box.</div>
+        <div class="word-bank"><span>Word bank:</span> extraction &nbsp;|&nbsp; pipeline &nbsp;|&nbsp; methane &nbsp;|&nbsp; sedimentary rock &nbsp;|&nbsp; LNG &nbsp;|&nbsp; drilling</div>
+        <ol class="q-list">
+          <li>Natural gas is mainly composed of <span class="answer-line">______________</span>, a colorless gas.</li>
+          <li>Oil is trapped under layers of <span class="answer-line">______________</span>.</li>
+          <li>The process of removing oil from the ground is called <span class="answer-line">______________</span>.</li>
+          <li>Workers use <span class="answer-line">______________</span> to make deep holes in the earth to reach oil.</li>
+          <li>Gas travels from wells to cities through a long <span class="answer-line">______________</span>.</li>
+          <li>When gas is cooled into liquid form for ocean transport, it is called <span class="answer-line">______________</span>.</li>
+        </ol>
+      </div>
+
+      <h3>Exercise C — True or False</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">C</span> Write T (True) or F (False).</div>
+        <ol class="q-list">
+          <li>Oil was formed millions of years ago from dead marine organisms. <span class="answer-line">___</span></li>
+          <li>A refinery is used to drill holes in the ground. <span class="answer-line">___</span></li>
+          <li>Natural gas contains mainly methane. <span class="answer-line">___</span></li>
+          <li>Greenhouse gases help cool the Earth's atmosphere. <span class="answer-line">___</span></li>
+          <li>Oil can be transported by pipeline, ship, rail, or truck. <span class="answer-line">___</span></li>
+          <li>Burning natural gas produces more CO₂ than burning coal. <span class="answer-line">___</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VIDEO 1 -->
+  <div class="section" id="b1-video1">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Watch — Oil 101</h2>
+    </div>
+    <div class="section-body">
+      <div class="callout callout-info">
+        <div class="callout-title">Before You Watch</div>
+        Write TWO things you expect to learn from this video: <br>1. __________________ &nbsp; 2. __________________
+      </div>
+      <div class="video-block">
+        <div class="video-label">Oil 101 — with subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=UPAqfTNiais&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Oil 101 on YouTube">
+            <img src="https://img.youtube.com/vi/UPAqfTNiais/hqdefault.jpg" alt="Oil 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>While You Watch — Answer these questions</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>What two chemical elements make up oil? <span class="answer-line">_____________________</span></li>
+          <li>When were today's oil deposits formed? <span class="answer-line">_____________________</span></li>
+          <li>What technology do geologists use to find oil? (name one method) <span class="answer-line">_____________________</span></li>
+          <li>Name THREE petroleum products made at a refinery: <span class="answer-line">_________</span>, <span class="answer-line">_________</span>, <span class="answer-line">_________</span></li>
+          <li>Name TWO environmental problems caused by oil: <span class="answer-line">_____________________</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. VIDEO 2 -->
+  <div class="section" id="b1-video2">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Watch — Natural Gas 101</h2>
+    </div>
+    <div class="section-body">
+      <div class="video-block">
+        <div class="video-label">Natural Gas 101 — with subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=-njmj0diWu8&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Natural Gas 101 on YouTube">
+            <img src="https://img.youtube.com/vi/-njmj0diWu8/hqdefault.jpg" alt="Natural Gas 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>While You Watch — Answer these questions</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>What is the chemical formula for methane? <span class="answer-line">_____</span></li>
+          <li>What is the difference between dry gas and wet gas? <span class="answer-line">_____________________</span></li>
+          <li>What is 'associated gas'? <span class="answer-line">_____________________</span></li>
+          <li>Name TWO main uses of natural gas: <span class="answer-line">_________</span>, <span class="answer-line">_________</span></li>
+          <li>How does methane compare to CO₂ as a greenhouse gas? <span class="answer-line">_____________________</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. READING -->
+  <div class="section" id="b1-reading">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Reading — How Oil is Formed</h2>
+    </div>
+    <div class="section-body">
+      <div class="reading-text">
+        Millions of years ago, tiny marine plants and animals died and fell to the ocean floor. Over time, they were buried under thick layers of mud and sand, which hardened into sedimentary rock. The heat and pressure from these layers slowly transformed the organic matter into oil and natural gas. This long process — taking millions of years — is why we call oil a <strong>fossil fuel</strong>. Today, this oil is found in underground rock formations called <strong>reservoirs</strong>. To extract it, engineers drill wells into the earth. The oil is then pumped to the surface and sent to refineries, where it is processed into fuels like gasoline, jet fuel, and diesel.
+      </div>
+      <h3>Comprehension Questions</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>Where did oil originally come from?</li>
+          <li>What two things caused the transformation of organic matter into oil?</li>
+          <li>What is a reservoir?</li>
+          <li>Name two fuels made at a refinery.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. DISCUSSION -->
+  <div class="section" id="b1-discussion">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Speaking &amp; Discussion</h2>
+    </div>
+    <div class="section-body">
+      <div class="discussion-card">
+        <h3>Discuss with a partner — use the vocabulary from this lesson</h3>
+        <ol>
+          <li>Do you think we use too much oil? What can we do instead?</li>
+          <li>Is natural gas better for the environment than oil? Why or why not?</li>
+          <li>What would happen if all the oil in the world ran out tomorrow?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div id="b1-answerkey">
+    <div class="answer-key-header">✦ Teacher's Answer Key — B1 Lesson</div>
+    <div class="answer-key-body">
+
+      <h3>Exercise A — Match the Word</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Word</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>petroleum</td><td class="ans-answer">d — a thick dark liquid found underground</td></tr>
+          <tr><td>2</td><td>reservoir</td><td class="ans-answer">f — underground rock layer that stores oil/gas</td></tr>
+          <tr><td>3</td><td>refinery</td><td class="ans-answer">a — factory processing crude oil into products</td></tr>
+          <tr><td>4</td><td>pipeline</td><td class="ans-answer">c — long tube carrying oil or gas</td></tr>
+          <tr><td>5</td><td>fossil fuel</td><td class="ans-answer">e — fuel formed from ancient living things</td></tr>
+          <tr><td>6</td><td>greenhouse gas</td><td class="ans-answer">b — gas that traps heat in Earth's atmosphere</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise B — Fill in the Blank</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Sentence</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Natural gas is mainly composed of…</td><td class="ans-answer">methane</td></tr>
+          <tr><td>2</td><td>Oil is trapped under layers of…</td><td class="ans-answer">sedimentary rock</td></tr>
+          <tr><td>3</td><td>The process of removing oil is called…</td><td class="ans-answer">extraction</td></tr>
+          <tr><td>4</td><td>Workers use ___ to make deep holes.</td><td class="ans-answer">drilling</td></tr>
+          <tr><td>5</td><td>Gas travels to cities through a long…</td><td class="ans-answer">pipeline</td></tr>
+          <tr><td>6</td><td>Gas cooled into liquid form is called…</td><td class="ans-answer">LNG</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise C — True or False</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Statement</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Oil was formed from dead marine organisms.</td><td class="ans-answer">T</td></tr>
+          <tr><td>2</td><td>A refinery is used to drill holes.</td><td class="ans-answer">F — a refinery processes oil into products</td></tr>
+          <tr><td>3</td><td>Natural gas contains mainly methane.</td><td class="ans-answer">T</td></tr>
+          <tr><td>4</td><td>Greenhouse gases help cool the Earth.</td><td class="ans-answer">F — they trap heat and warm the Earth</td></tr>
+          <tr><td>5</td><td>Oil can be transported by pipeline, ship, rail, or truck.</td><td class="ans-answer">T</td></tr>
+          <tr><td>6</td><td>Natural gas produces more CO₂ than coal.</td><td class="ans-answer">F — natural gas produces approx. half the CO₂ of coal</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Video Task — Oil 101</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Two elements in oil</td><td class="ans-answer">Hydrogen and carbon</td></tr>
+          <tr><td>2</td><td>When were deposits formed?</td><td class="ans-answer">Millions of years ago</td></tr>
+          <tr><td>3</td><td>Technology to find oil</td><td class="ans-answer">Seismic surveying, rock core sampling (any one)</td></tr>
+          <tr><td>4</td><td>Three petroleum products</td><td class="ans-answer">Gasoline, diesel, jet fuel (also: asphalt, plastics)</td></tr>
+          <tr><td>5</td><td>Two environmental problems</td><td class="ans-answer">Land disturbance / greenhouse gas emissions / geopolitical tensions (any two)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Video Task — Natural Gas 101</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>a</td><td>Formula for methane</td><td class="ans-answer">CH₄</td></tr>
+          <tr><td>b</td><td>Dry gas vs. wet gas</td><td class="ans-answer">Dry gas = mostly methane. Wet gas = methane + ethane/butane (NGLs)</td></tr>
+          <tr><td>c</td><td>Associated gas</td><td class="ans-answer">Natural gas found in oil reservoirs and extracted alongside oil</td></tr>
+          <tr><td>d</td><td>Two uses of natural gas</td><td class="ans-answer">Heating, electricity generation (also vehicles, fertilizers)</td></tr>
+          <tr><td>e</td><td>Methane vs CO₂</td><td class="ans-answer">Methane has nearly 24× the warming impact of CO₂</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reading Comprehension</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Where did oil come from?</td><td class="ans-answer">Dead marine plants and animals that sank to the ocean floor</td></tr>
+          <tr><td>2</td><td>What caused the transformation?</td><td class="ans-answer">Heat and pressure from layers of sedimentary rock</td></tr>
+          <tr><td>3</td><td>What is a reservoir?</td><td class="ans-answer">An underground rock formation where oil/gas is stored</td></tr>
+          <tr><td>4</td><td>Two fuels from a refinery</td><td class="ans-answer">Gasoline, diesel, jet fuel (any two)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     LESSON B2 – 1
+════════════════════════════════════════════════════════ -->
+<div class="lesson-page" id="lesson-b2l1">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;">
+      <div class="level-badge">ESL · LEVEL B2</div>
+      <div class="lesson-num">LESSON 2 OF 3</div>
+    </div>
+    <h1>From the Earth to the Refinery</h1>
+    <p>Understanding Oil, Natural Gas &amp; Upstream Petroleum &nbsp;·&nbsp; 75–90 minutes</p>
+  </header>
+  <nav class="lesson-subnav">
+    <div class="nav-inner">
+      
+    <a class="nav-item active" href="#b2l1-activate">1 Activation</a>
+    <a class="nav-item" href="#b2l1-vocab">2 Vocabulary</a>
+    <a class="nav-item" href="#b2l1-video1">3 Oil 101</a>
+    <a class="nav-item" href="#b2l1-video2">4 Natural Gas 101</a>
+    <a class="nav-item" href="#b2l1-reading">5 Industry Text</a>
+    <a class="nav-item" href="#b2l1-language">6 Language</a>
+    <a class="nav-item" href="#b2l1-answerkey">✦ Answer Key</a>
+  
+    </div>
+  </nav>
+  <main class="main">
+
+  <div class="callout callout-info" style="margin-bottom:24px;">
+    <div class="callout-title">Learning Objectives</div>
+    Use advanced technical vocabulary · Explain formation, extraction, and processing of crude oil and natural gas · Distinguish upstream / midstream / downstream sectors · Critically discuss economic and environmental implications · Analyse authentic video content and a professional industry document.
+  </div>
+
+  <!-- 1. ACTIVATION -->
+  <div class="section" id="b2l1-activate">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Activate Background Knowledge</h2>
+    </div>
+    <div class="section-body">
+      <div class="callout callout-teal">
+        <div class="callout-title">Before You Begin — Group Discussion (10 min)</div>
+        Discuss in small groups, then share with the class:
+        <ol style="margin-top:8px;">
+          <li>What products in your daily life contain or are made from petroleum?</li>
+          <li>Which countries are major oil producers? Where does most of the world's oil come from?</li>
+          <li>What do you understand by 'fossil fuel'? Why does this name make sense?</li>
+          <li>Have you heard of 'Brent Crude' or 'WTI'? What do you think these terms mean?</li>
+        </ol>
+      </div>
+      <div class="two-col">
+        <div class="col-box">
+          <h4>Industry Sectors</h4>
+          <p style="font-size:14px;">The oil and gas industry is divided into three sectors:</p>
+          <ul style="margin:0;font-size:14px;">
+            <li><strong>Upstream</strong> — exploration and production (E&amp;P)</li>
+            <li><strong>Midstream</strong> — transport and storage</li>
+            <li><strong>Downstream</strong> — refining, distribution, and retail</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Global Numbers</h4>
+          <ul style="margin:0;font-size:14px;">
+            <li>World uses ~100 million barrels of oil per day</li>
+            <li>Saudi Arabia, Russia, USA are top producers</li>
+            <li>Crude prices are quoted in USD per barrel</li>
+            <li>Natural gas is measured in MMBtu or m³</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. VOCABULARY -->
+  <div class="section" id="b2l1-vocab">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Vocabulary in Depth</h2>
+    </div>
+    <div class="section-body">
+      <p>Study these terms carefully — you will encounter all of them in the videos and reading texts.</p>
+      <table class="vocab-table">
+        <thead><tr><th>Term</th><th>Definition</th><th>In Context</th></tr></thead>
+        <tbody>
+          <tr><td class="vocab-term">crude oil / petroleum</td><td>A naturally occurring, unrefined liquid fossil fuel composed mainly of hydrocarbons</td><td>Crude oil is extracted and sent to refineries.</td></tr>
+          <tr><td class="vocab-term">hydrocarbon</td><td>An organic compound consisting entirely of hydrogen and carbon atoms</td><td>Methane and propane are simple hydrocarbons.</td></tr>
+          <tr><td class="vocab-term">reservoir (geological)</td><td>A subsurface rock formation with pores large enough to hold fluids like oil and gas</td><td>Engineers located a large reservoir 3 km below the seabed.</td></tr>
+          <tr><td class="vocab-term">sedimentary rock</td><td>Rock formed by compression of sediment layers over millions of years</td><td>Oil is often found trapped beneath sedimentary rock.</td></tr>
+          <tr><td class="vocab-term">seismic surveying</td><td>A geophysical method using sound waves to map underground rock structures</td><td>Seismic surveying helps locate oil before drilling begins.</td></tr>
+          <tr><td class="vocab-term">upstream sector</td><td>The phase of oil &amp; gas involving exploration and production (E&amp;P)</td><td>Upstream companies search for and extract crude oil.</td></tr>
+          <tr><td class="vocab-term">downstream sector</td><td>The phase involving refining, distribution, and sale of petroleum products</td><td>Refinery and petrol station businesses are downstream.</td></tr>
+          <tr><td class="vocab-term">benchmark crude</td><td>A standard reference oil used to price other crudes globally (e.g. Brent, WTI)</td><td>WTI is a major benchmark crude.</td></tr>
+          <tr><td class="vocab-term">API gravity</td><td>A measure of how heavy or light petroleum is compared to water</td><td>Light crude oils have higher API gravity and fetch higher prices.</td></tr>
+          <tr><td class="vocab-term">flaring</td><td>The controlled burning of associated gas at a well site, often as waste</td><td>New regulations aim to reduce flaring at oil fields.</td></tr>
+          <tr><td class="vocab-term">hydraulic fracturing</td><td>A technique injecting high-pressure fluid to fracture rock and release trapped gas</td><td>Fracking has dramatically increased US natural gas output.</td></tr>
+          <tr><td class="vocab-term">NGLs</td><td>Natural Gas Liquids — liquid hydrocarbons (ethane, propane, butane) separated from natural gas</td><td>NGLs are used to produce plastics and refrigerants.</td></tr>
+          <tr><td class="vocab-term">LNG</td><td>Natural gas cooled to −162°C and liquefied for transport in tankers</td><td>LNG terminals allow countries without pipelines to import gas.</td></tr>
+          <tr><td class="vocab-term">cap rock</td><td>Impermeable rock that traps oil and gas in a reservoir below</td><td>Without a cap rock, gas would escape to the surface.</td></tr>
+          <tr><td class="vocab-term">fossil fuel</td><td>An energy source (oil, gas, coal) derived from the remains of ancient organisms</td><td>Society's dependence on fossil fuels drives climate change.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise A — Definitions in Context</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">A</span> Choose the best word or phrase from the vocabulary list to complete each sentence.</div>
+        <ol class="q-list">
+          <li>Geologists used <span class="answer-line">_______________________</span> to map the underground rock formations before drilling began.</li>
+          <li>The oil company's <span class="answer-line">_______________________</span> operations include exploration, drilling, and production.</li>
+          <li>Brent Crude and WTI serve as <span class="answer-line">_______________________</span> crudes that set global oil prices.</li>
+          <li>The gas was trapped underground by a layer of <span class="answer-line">_______________________</span> that prevented it from escaping.</li>
+          <li>Propane and butane are examples of <span class="answer-line">_______________________</span>, which can be separated from raw natural gas.</li>
+          <li>The <span class="answer-line">_______________________</span> of the crude oil sample was 38°, indicating a relatively light oil.</li>
+        </ol>
+      </div>
+
+      <h3>Exercise B — Word Form Challenge</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">B</span> Complete the table with the correct word forms.</div>
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <thead><tr style="background:var(--navy);color:white;">
+            <th style="padding:8px 12px;">Noun</th><th style="padding:8px 12px;">Verb</th><th style="padding:8px 12px;">Adjective</th><th style="padding:8px 12px;">Example sentence</th>
+          </tr></thead>
+          <tbody>
+            <tr style="background:#f0f5fa;"><td style="padding:8px 12px;font-weight:700;">extraction</td><td style="padding:8px 12px;">to extract</td><td style="padding:8px 12px;color:var(--muted);">_____________</td><td style="padding:8px 12px;">The __________ of oil requires heavy machinery.</td></tr>
+            <tr><td style="padding:8px 12px;font-weight:700;">exploration</td><td style="padding:8px 12px;color:var(--muted);">_____________</td><td style="padding:8px 12px;">exploratory</td><td style="padding:8px 12px;">The company began __________ surveys in the North Sea.</td></tr>
+            <tr style="background:#f0f5fa;"><td style="padding:8px 12px;font-weight:700;color:var(--muted);">_____________</td><td style="padding:8px 12px;">to refine</td><td style="padding:8px 12px;">refined</td><td style="padding:8px 12px;">__________ is the process of purifying crude oil.</td></tr>
+            <tr><td style="padding:8px 12px;font-weight:700;">production</td><td style="padding:8px 12px;">to produce</td><td style="padding:8px 12px;color:var(--muted);">_____________</td><td style="padding:8px 12px;">The well's daily __________ was 5,000 barrels.</td></tr>
+            <tr style="background:#f0f5fa;"><td style="padding:8px 12px;font-weight:700;">contamination</td><td style="padding:8px 12px;color:var(--muted);">_____________</td><td style="padding:8px 12px;">contaminated</td><td style="padding:8px 12px;">Oil spills can lead to serious __________ of coastal waters.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Exercise C — Upstream vs. Downstream</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">C</span> Place each activity in the correct column.</div>
+        <div class="callout callout-tip" style="margin-bottom:12px;">
+          <div class="callout-title">Activities</div>
+          a) Seismic surveying &nbsp;·&nbsp; b) Selling petrol at a filling station &nbsp;·&nbsp; c) Processing crude oil at a refinery &nbsp;·&nbsp; d) Drilling an exploratory well &nbsp;·&nbsp; e) Transporting oil in a supertanker &nbsp;·&nbsp; f) Injecting water to maintain reservoir pressure &nbsp;·&nbsp; g) Distributing diesel to supermarkets &nbsp;·&nbsp; h) Analysing rock core samples
+        </div>
+        <div class="two-col">
+          <div class="col-box">
+            <h4 style="color:var(--navy);">UPSTREAM</h4>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Exploration &amp; Production</p>
+            <p style="font-size:14px;">Letters: ____________________</p>
+          </div>
+          <div class="col-box">
+            <h4 style="color:var(--amber);">DOWNSTREAM</h4>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Refining &amp; Retail</p>
+            <p style="font-size:14px;">Letters: ____________________</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VIDEO 1 -->
+  <div class="section" id="b2l1-video1">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Video — Oil 101</h2>
+    </div>
+    <div class="section-body">
+      <div class="callout callout-info">
+        <div class="callout-title">Before You Watch</div>
+        Write TWO things you expect to learn from this video: <br>1. ______________________________ &nbsp;&nbsp; 2. ______________________________
+      </div>
+      <div class="video-block">
+        <div class="video-label">Oil 101 — subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=UPAqfTNiais&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Oil 101 on YouTube">
+            <img src="https://img.youtube.com/vi/UPAqfTNiais/hqdefault.jpg" alt="Oil 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>Detailed Comprehension</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>Oil is described as a 'fossil fuel'. In your own words, explain why this name is appropriate. (2–3 sentences)</li>
+          <li>What specific technologies are used to locate oil? List them.</li>
+          <li>Describe the chain of steps from reservoir to consumer.</li>
+          <li>The video mentions three social and environmental challenges. List and briefly explain each.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. VIDEO 2 -->
+  <div class="section" id="b2l1-video2">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Video — Natural Gas 101</h2>
+    </div>
+    <div class="section-body">
+      <div class="video-block">
+        <div class="video-label">Natural Gas 101 — subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=-njmj0diWu8&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Natural Gas 101 on YouTube">
+            <img src="https://img.youtube.com/vi/-njmj0diWu8/hqdefault.jpg" alt="Natural Gas 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>Analysis Questions</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>Compare dry gas and wet gas. What are NGLs and why are they commercially valuable?</li>
+          <li>The video describes four processing steps. List them in order: Step 1 → Step 2 → Step 3 → Step 4</li>
+          <li>What specific safety risks of natural gas are described?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. READING -->
+  <div class="section" id="b2l1-reading">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Industry Text — Crude Oil Benchmarks</h2>
+    </div>
+    <div class="section-body">
+      <p>Read this summary from a professional petroleum industry document, then answer the questions.</p>
+      <div class="reading-text">
+        <strong>CRUDE OIL BENCHMARKS &amp; UPSTREAM PRICING</strong><br><br>
+        Not all crude oil is the same. The physical properties of crude — especially its density (measured as <strong>API gravity</strong>) and its sulphur content — determine how easy and costly it is to refine, and therefore what price it commands on global markets.<br><br>
+        Crude oils are broadly classified along two scales: <strong>light vs. heavy</strong> (light crudes have high API gravity and yield more valuable products like gasoline) and <strong>sweet vs. sour</strong> (sweet crude has low sulphur content below 0.5% and is cheaper to refine; sour crude requires additional processing).<br><br>
+        The most traded <strong>benchmark crudes</strong> are: <em>Brent Crude</em> (North Sea) — the global pricing benchmark for approximately two-thirds of the world's traded oil; <em>WTI</em> (West Texas Intermediate) — the benchmark for North American crude; and <em>Dubai/Oman Crude</em> — a benchmark for Middle Eastern crude delivered to Asian markets.<br><br>
+        Upstream companies involved in exploration and production (E&amp;P) are most directly affected by benchmark prices. When a company produces crude oil, it sells it at a price linked to one of these benchmarks, adjusted for quality differentials.
+      </div>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">Reading</span> Comprehension Questions</div>
+        <ol class="q-list">
+          <li>What two physical properties of crude oil most affect its price and refining cost?</li>
+          <li>Explain in your own words the difference between 'sweet' and 'sour' crude.</li>
+          <li>Why is Brent Crude considered the most important global benchmark?</li>
+          <li>How does the upstream sector relate to crude oil benchmarks?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. LANGUAGE -->
+  <div class="section" id="b2l1-language">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Language in Use</h2>
+    </div>
+    <div class="section-body">
+      <h3>Cause and Effect Language</h3>
+      <div class="callout callout-teal">
+        <div class="callout-title">Useful Language</div>
+        <strong>Cause → Effect:</strong> as a result of / due to / because of / owing to / given that<br>
+        <strong>Effect ← Cause:</strong> leads to / results in / causes / contributes to / gives rise to<br>
+        <strong>Contrast:</strong> however / nevertheless / despite / although / whereas
+      </div>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">Grammar</span> Complete with a cause/effect expression.</div>
+        <ol class="q-list">
+          <li><span class="answer-line">__________________</span> the high sulphur content of sour crude, it is more expensive to refine.</li>
+          <li>The widespread burning of fossil fuels <span class="answer-line">__________________</span> higher concentrations of CO₂ in the atmosphere.</li>
+          <li>Methane is colourless and odourless; <span class="answer-line">__________________</span>, it poses serious safety risks in enclosed spaces.</li>
+          <li><span class="answer-line">__________________</span> advances in hydraulic fracturing, shale gas production has increased dramatically in the US.</li>
+          <li>Oil spills <span class="answer-line">__________________</span> severe environmental damage to marine ecosystems.</li>
+          <li><span class="answer-line">__________________</span> being a cleaner fuel than coal, natural gas still releases greenhouse gases.</li>
+        </ol>
+      </div>
+
+      <h3>Extended Writing — Choose ONE (150–200 words)</h3>
+      <div class="callout callout-tip">
+        <div class="callout-title">Writing Task</div>
+        <strong>Option A:</strong> "Natural gas is the ideal 'bridge fuel' between oil and renewables." To what extent do you agree? Use evidence from the videos and text.<br><br>
+        <strong>Option B:</strong> Should governments impose stricter regulations on flaring? Discuss the economic and environmental trade-offs.
+      </div>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div id="b2l1-answerkey">
+    <div class="answer-key-header">✦ Teacher's Answer Key — B2 Lesson 1</div>
+    <div class="answer-key-body">
+
+      <h3>Exercise A — Definitions in Context</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Sentence</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Geologists used ___ to map underground formations</td><td class="ans-answer">seismic surveying</td></tr>
+          <tr><td>2</td><td>The oil company's ___ operations</td><td class="ans-answer">upstream</td></tr>
+          <tr><td>3</td><td>Brent Crude and WTI serve as ___ crudes</td><td class="ans-answer">benchmark</td></tr>
+          <tr><td>4</td><td>Gas was trapped by a layer of ___</td><td class="ans-answer">cap rock</td></tr>
+          <tr><td>5</td><td>Propane and butane are examples of ___</td><td class="ans-answer">NGLs (Natural Gas Liquids)</td></tr>
+          <tr><td>6</td><td>The ___ of the crude was 38°</td><td class="ans-answer">API gravity</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise B — Word Forms</h3>
+      <table class="ans-table">
+        <thead><tr><th>Row</th><th>Gap</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>extraction</td><td>Adjective</td><td class="ans-answer">extractable / extracted</td></tr>
+          <tr><td>exploration</td><td>Verb</td><td class="ans-answer">to explore</td></tr>
+          <tr><td>refine</td><td>Noun</td><td class="ans-answer">refining / refinement</td></tr>
+          <tr><td>production</td><td>Adjective</td><td class="ans-answer">productive</td></tr>
+          <tr><td>contamination</td><td>Verb</td><td class="ans-answer">to contaminate</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise C — Upstream vs. Downstream</h3>
+      <table class="ans-table">
+        <thead><tr><th>Column</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>Upstream</td><td class="ans-answer">a, d, f, h — seismic surveying, drilling, water injection, rock core analysis</td></tr>
+          <tr><td>Downstream</td><td class="ans-answer">b, c, g — filling station, refinery, diesel distribution (e = midstream, also acceptable)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Video — Oil 101</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Why 'fossil fuel'?</td><td class="ans-answer">Oil formed from dead organisms millions of years ago, buried and transformed by heat and pressure — like fossils</td></tr>
+          <tr><td>2</td><td>Technologies to locate oil</td><td class="ans-answer">Seismic surveying, rock core sampling, advanced exploration technologies</td></tr>
+          <tr><td>3</td><td>Reservoir to consumer chain</td><td class="ans-answer">Extraction (drilling) → transport (pipeline/ship/rail/truck) → refinery → petroleum products → consumer</td></tr>
+          <tr><td>4</td><td>Three challenges</td><td class="ans-answer">1) Land disturbance; 2) Greenhouse gas emissions; 3) Geopolitical tensions over oil resources</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Video — Natural Gas 101</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Dry vs wet gas + NGLs</td><td class="ans-answer">Dry gas = mostly methane. Wet gas = methane + ethane/butane. NGLs sold separately for plastics, refrigerants, etc.</td></tr>
+          <tr><td>2</td><td>4 processing steps</td><td class="ans-answer">1) Oil/condensate removal; 2) Water removal; 3) NGL separation; 4) Sulphur &amp; CO₂ removal</td></tr>
+          <tr><td>3</td><td>Safety risks</td><td class="ans-answer">Colourless, odourless, highly toxic, highly explosive; methane leaks contribute to climate change</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reading Comprehension</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Two properties affecting price</td><td class="ans-answer">API gravity (density) and sulphur content (sweet vs. sour)</td></tr>
+          <tr><td>2</td><td>Sweet vs. sour crude</td><td class="ans-answer">Sweet = low sulphur (&lt;0.5%), cheaper to refine; Sour = high sulphur, requires extra processing</td></tr>
+          <tr><td>3</td><td>Why Brent is most important</td><td class="ans-answer">It prices approximately two-thirds of the world's internationally traded crude oil</td></tr>
+          <tr><td>4</td><td>Upstream and benchmarks</td><td class="ans-answer">E&amp;P companies sell crude at prices pegged to a benchmark, adjusted for quality; they are most directly affected</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Cause &amp; Effect Language</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="ans-answer">Due to / Owing to / Because of</td></tr>
+          <tr><td>2</td><td class="ans-answer">leads to / results in / contributes to</td></tr>
+          <tr><td>3</td><td class="ans-answer">however / nevertheless</td></tr>
+          <tr><td>4</td><td class="ans-answer">Due to / Owing to / As a result of</td></tr>
+          <tr><td>5</td><td class="ans-answer">cause / result in / give rise to</td></tr>
+          <tr><td>6</td><td class="ans-answer">Despite / Although / Even though</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     LESSON B2 – 2
+════════════════════════════════════════════════════════ -->
+<div class="lesson-page" id="lesson-b2l2">
+  <header class="lesson-header">
+    <div class="badge-row">
+      <span class="badge badge-blue">ESL · LEVEL B2</span>
+      <span class="badge badge-steel">LESSON 3 OF 3</span>
+    </div>
+    <h1>Drilling Down:<br>Platforms &amp; Operations</h1>
+    <p>How Oil Platforms Work — From Wellbore to Offloading &nbsp;·&nbsp; 75–90 minutes</p>
+  </header>
+  <nav class="lesson-subnav">
+    <div class="nav-inner">
+      
+    <a class="nav-item active" href="#b2l2-casestudy">1 Case Study</a>
+    <a class="nav-item" href="#b2l2-vocab">2 Vocabulary</a>
+    <a class="nav-item" href="#b2l2-video1">3 Oil 101</a>
+    <a class="nav-item" href="#b2l2-video2">4 Natural Gas 101</a>
+    <a class="nav-item" href="#b2l2-lifecycle">5 Life Cycle</a>
+    <a class="nav-item" href="#b2l2-language">6 Language</a>
+    <a class="nav-item" href="#b2l2-answerkey">✦ Answer Key</a>
+  
+    </div>
+  </nav>
+  <main class="main">
+
+  <div class="callout callout-info" style="margin-bottom:24px;">
+    <div class="callout-title">Learning Objectives</div>
+    Use specialised drilling and platform vocabulary · Describe the life cycle of an oil well from exploration to decommissioning · Explain the key components of an offshore platform · Discuss safety and environmental challenges · Produce coherent professional-level English writing.
+  </div>
+
+  <!-- 1. CASE STUDY -->
+  <div class="section" id="b2l2-casestudy">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Context Setting — Case Study</h2>
+    </div>
+    <div class="section-body">
+      <div class="callout callout-danger">
+        <div class="callout-title">⚠ Deepwater Horizon, Gulf of Mexico — April 2010</div>
+        The Deepwater Horizon drilling rig suffered a <strong>blowout</strong> — an uncontrolled release of oil and gas from the well. The <strong>blowout preventer (BOP)</strong> failed to seal the well. An explosion killed 11 workers, and the resulting oil spill — the largest in US history — released approximately 4.9 million barrels of crude oil into the ocean over 87 days.
+        <br><br>
+        <strong>Discuss:</strong>
+        <ol style="margin-top:8px;">
+          <li>What does this event tell us about the risks of offshore drilling?</li>
+          <li>What piece of equipment failed, and why was that so critical?</li>
+          <li>Who bears responsibility — the oil company, contractors, or government regulators?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. VOCABULARY -->
+  <div class="section" id="b2l2-vocab">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Specialised Vocabulary — Drilling &amp; Platform Operations</h2>
+    </div>
+    <div class="section-body">
+      <p>These technical terms are used throughout the upstream oil and gas industry. Study them carefully before the exercises.</p>
+      <table class="vocab-table">
+        <thead><tr><th>Term</th><th>Definition</th><th>In Context</th></tr></thead>
+        <tbody>
+          <tr><td class="vocab-term">drilling rig</td><td>A structure with equipment used to drill wells into the earth or ocean floor</td><td>The offshore drilling rig operated 24 hours a day.</td></tr>
+          <tr><td class="vocab-term">wellbore</td><td>The drilled hole that leads from the surface to the oil or gas reservoir</td><td>Casing is inserted into the wellbore to prevent collapse.</td></tr>
+          <tr><td class="vocab-term">blowout preventer (BOP)</td><td>A safety device that seals a well in an emergency to stop uncontrolled flow</td><td>The BOP failed, causing the Deepwater Horizon disaster.</td></tr>
+          <tr><td class="vocab-term">production platform</td><td>An offshore structure used to extract oil and gas and process it before transport</td><td>The production platform housed 200 workers at a time.</td></tr>
+          <tr><td class="vocab-term">subsea system</td><td>Equipment installed on the ocean floor to control oil and gas flow</td><td>Subsea systems allow extraction at extreme depths.</td></tr>
+          <tr><td class="vocab-term">wireline logging</td><td>A method of measuring rock properties inside a drilled well using instruments on a cable</td><td>Wireline logging helped engineers assess reservoir quality.</td></tr>
+          <tr><td class="vocab-term">completion</td><td>The final steps of preparing a well for production after drilling</td><td>Well completion included perforating the casing and installing pumps.</td></tr>
+          <tr><td class="vocab-term">workover</td><td>Maintenance operations on a well to restore or improve production</td><td>A workover was required after production declined.</td></tr>
+          <tr><td class="vocab-term">production separator</td><td>Equipment on a platform that separates oil, gas, and water from the well stream</td><td>The production separator removed water from the crude oil flow.</td></tr>
+          <tr><td class="vocab-term">decommissioning</td><td>The process of safely shutting down and dismantling a well or platform at end of life</td><td>Decommissioning an offshore platform costs hundreds of millions of dollars.</td></tr>
+          <tr><td class="vocab-term">EOR</td><td>Enhanced Oil Recovery — techniques used to extract more oil after primary recovery declines</td><td>CO₂ injection is one form of EOR.</td></tr>
+          <tr><td class="vocab-term">FPSO</td><td>Floating Production Storage and Offloading — a vessel that produces, processes, stores, and offloads oil at sea</td><td>An FPSO was deployed where no pipeline existed.</td></tr>
+          <tr><td class="vocab-term">flow assurance</td><td>Engineering discipline ensuring fluids flow from reservoir to surface without obstruction</td><td>Flow assurance engineers prevent wax build-up in pipelines.</td></tr>
+          <tr><td class="vocab-term">H₂S (hydrogen sulphide)</td><td>A toxic gas found in sour crude wells, dangerous at very low concentrations</td><td>All workers on the rig carried H₂S detectors.</td></tr>
+          <tr><td class="vocab-term">spud date</td><td>The official date that drilling begins on a new well</td><td>The spud date for the exploration well was set for March 15.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise A — Technical Definitions</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">A</span> Write the correct term for each definition.</div>
+        <ol class="q-list">
+          <li>A floating vessel that produces, processes, stores, and offloads crude oil at sea: <span class="answer-line">_____________</span></li>
+          <li>The drilled hole connecting the surface to the underground reservoir: <span class="answer-line">_____________</span></li>
+          <li>A safety valve that seals a well to prevent an uncontrolled release: <span class="answer-line">_____________</span></li>
+          <li>Techniques applied after initial production declines to recover more oil: <span class="answer-line">_____________</span></li>
+          <li>The process of permanently closing and dismantling a well or platform: <span class="answer-line">_____________</span></li>
+          <li>Equipment that separates oil, gas, and water on the platform: <span class="answer-line">_____________</span></li>
+        </ol>
+      </div>
+
+      <h3>Exercise B — Collocations</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">B</span> Match verbs (1–6) with nouns (a–f) to make industry collocations.</div>
+        <div class="two-col">
+          <div>
+            <ol style="font-size:14px;padding-left:18px;">
+              <li style="margin-bottom:8px;">drill</li><li style="margin-bottom:8px;">install</li><li style="margin-bottom:8px;">conduct</li>
+              <li style="margin-bottom:8px;">perform</li><li style="margin-bottom:8px;">prevent</li><li style="margin-bottom:8px;">complete</li>
+            </ol>
+          </div>
+          <div>
+            <ol style="font-size:14px;list-style-type:lower-alpha;padding-left:18px;">
+              <li style="margin-bottom:8px;">a blowout</li><li style="margin-bottom:8px;">wireline logging</li><li style="margin-bottom:8px;">a wellbore</li>
+              <li style="margin-bottom:8px;">a workover</li><li style="margin-bottom:8px;">a subsea system</li><li style="margin-bottom:8px;">a well</li>
+            </ol>
+          </div>
+        </div>
+        <p style="font-size:14px;margin-top:12px;">Answers: 1 — ___ &nbsp; 2 — ___ &nbsp; 3 — ___ &nbsp; 4 — ___ &nbsp; 5 — ___ &nbsp; 6 — ___</p>
+      </div>
+
+      <h3>Exercise C — Register &amp; Formality</h3>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">C</span> Rewrite each informal sentence using correct technical vocabulary.</div>
+        <ol class="q-list">
+          <li>"They poked a hole in the seabed to look for oil."<br><span style="color:var(--muted);font-size:13px;">Formal version:</span> <span class="answer-line" style="min-width:360px;">______________________________________</span></li>
+          <li>"They cleaned up the well and got it working again."<br><span style="color:var(--muted);font-size:13px;">Formal version:</span> <span class="answer-line" style="min-width:360px;">______________________________________</span></li>
+          <li>"The gas in the well is poisonous and can explode."<br><span style="color:var(--muted);font-size:13px;">Formal version:</span> <span class="answer-line" style="min-width:360px;">______________________________________</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VIDEO 1 -->
+  <div class="section" id="b2l2-video1">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Re-watch — Oil 101 (Focus: Extraction Process)</h2>
+    </div>
+    <div class="section-body">
+      <p>This time, focus specifically on the <strong>technical process of oil extraction</strong> and the journey from well to refinery.</p>
+      <div class="video-block">
+        <div class="video-label">Oil 101 — subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=UPAqfTNiais&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Oil 101 on YouTube">
+            <img src="https://img.youtube.com/vi/UPAqfTNiais/hqdefault.jpg" alt="Oil 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>Focus Task — Map the Journey of Oil</h3>
+      <p>Complete this flow diagram as you watch:</p>
+      <div class="flow-diagram">
+        <div class="flow-step">STEP 1<span>____________</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="background:#1d6fa4;">STEP 2<span>____________</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="background:#0d7377;">STEP 3<span>____________</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="background:#256040;">STEP 4<span>____________</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="background:#c07820;">STEP 5<span>____________</span></div>
+      </div>
+      <h3>Critical Thinking</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>The video says oil is 'recovered' from the reservoir. Why might this word choice be significant? What does it imply about human activity?</li>
+          <li>The video mentions oil 'undergoes a complex refining process'. What does this tell you about crude oil? Is it ready to use as extracted?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. VIDEO 2 -->
+  <div class="section" id="b2l2-video2">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Re-watch — Natural Gas 101 (Focus: Infrastructure)</h2>
+    </div>
+    <div class="section-body">
+      <div class="video-block">
+        <div class="video-label">Natural Gas 101 — subtitles enabled</div>
+        <div class="video-thumb-wrap">
+          <a href="https://www.youtube.com/watch?v=-njmj0diWu8&cc_load_policy=1" target="_blank" rel="noopener" aria-label="Watch Natural Gas 101 on YouTube">
+            <img src="https://img.youtube.com/vi/-njmj0diWu8/hqdefault.jpg" alt="Natural Gas 101 thumbnail">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </a>
+        </div>
+        <p class="video-open-note">▶ Opens on YouTube in a new tab &nbsp;·&nbsp; Turn on subtitles (CC) in the YouTube player</p>
+      </div>
+      <h3>Infrastructure Chain</h3>
+      <div class="callout callout-green">
+        <div class="callout-title">Complete the Natural Gas Infrastructure Chain</div>
+        Well → <span class="answer-line">_______________</span> (small collection pipes) → <span class="answer-line">_______________</span> (processing plant) → <span class="answer-line">_______________</span> (main transport pipes) → distribution centres OR <span class="answer-line">_______________</span> (long-distance shipping)
+      </div>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">Analysis</span> LNG vs. Pipeline Delivery</div>
+        <p style="font-size:14px;margin-bottom:12px;">Compare the infrastructure required for LNG export vs. pipeline gas delivery:</p>
+        <div class="two-col">
+          <div class="col-box">
+            <h4>LNG Export</h4>
+            <p style="font-size:13px;color:var(--muted);">Advantages: ______________________</p>
+            <p style="font-size:13px;color:var(--muted);">Disadvantages: ____________________</p>
+          </div>
+          <div class="col-box">
+            <h4>Pipeline Delivery</h4>
+            <p style="font-size:13px;color:var(--muted);">Advantages: ______________________</p>
+            <p style="font-size:13px;color:var(--muted);">Disadvantages: ____________________</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. LIFE CYCLE -->
+  <div class="section" id="b2l2-lifecycle">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>How Offshore Platforms Operate — The Well Life Cycle</h2>
+    </div>
+    <div class="section-body">
+      <p>Offshore oil production is one of the most technically challenging and capital-intensive industrial activities in the world. A modern offshore well goes through five distinct phases:</p>
+      <div class="phases">
+        <div class="phase phase-1">
+          <div class="phase-num">1</div>
+          <div class="phase-content">
+            <h4>EXPLORATION</h4>
+            <p>Geologists use seismic surveys to identify potential reservoir structures. If results are promising, an exploration well is drilled. Only about <strong>1 in 10</strong> exploration wells results in a commercial discovery. The date drilling begins is called the <strong>spud date</strong>.</p>
+          </div>
+        </div>
+        <div class="phase phase-2">
+          <div class="phase-num">2</div>
+          <div class="phase-content">
+            <h4>APPRAISAL</h4>
+            <p>If oil is found, appraisal wells are drilled nearby to assess the size and quality of the reservoir. Engineers analyse <strong>API gravity</strong>, sulphur content, and reservoir pressure to determine commercial viability.</p>
+          </div>
+        </div>
+        <div class="phase phase-3">
+          <div class="phase-num">3</div>
+          <div class="phase-content">
+            <h4>DEVELOPMENT</h4>
+            <p>The platform or <strong>FPSO</strong> is designed, constructed, and installed. Development wells are drilled. The <strong>wellbore</strong> is lined with steel casing and cemented. <strong>Blowout preventers (BOPs)</strong> are installed at the wellhead.</p>
+          </div>
+        </div>
+        <div class="phase phase-4">
+          <div class="phase-num">4</div>
+          <div class="phase-content">
+            <h4>PRODUCTION</h4>
+            <p>Oil and gas flow from the reservoir through the wellbore. A <strong>production separator</strong> divides the stream into crude oil, gas, and water. Over time, reservoir pressure declines and <strong>EOR</strong> (Enhanced Oil Recovery) techniques may be applied.</p>
+          </div>
+        </div>
+        <div class="phase phase-5">
+          <div class="phase-num">5</div>
+          <div class="phase-content">
+            <h4>DECOMMISSIONING</h4>
+            <p>At end of life, the well is permanently sealed with cement plugs. The platform is dismantled and removed. <strong>Decommissioning</strong> must comply with strict environmental regulations and costs hundreds of millions of dollars.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Comprehension &amp; Analysis</h3>
+      <div class="exercise">
+        <ol class="q-list">
+          <li>Why is the exploration phase considered so risky from a financial perspective?</li>
+          <li>What is the purpose of a BOP, and what happens if it fails? (Reference the case study.)</li>
+          <li>Why might EOR techniques become increasingly important as existing oil fields age?</li>
+          <li>Why might decommissioning be challenging? Give at least two reasons.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. LANGUAGE -->
+  <div class="section" id="b2l2-language">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Language &amp; Professional Output</h2>
+    </div>
+    <div class="section-body">
+      <h3>Passive Voice in Technical Writing</h3>
+      <div class="callout callout-info">
+        <div class="callout-title">Why Passive?</div>
+        Technical and scientific texts use the passive voice extensively. It focuses on what is done, not who does it — which is appropriate in professional industry writing.
+        <br><br>
+        <strong>Active:</strong> Engineers install the blowout preventer before production begins.<br>
+        <strong>Passive:</strong> The blowout preventer <em>is installed</em> before production begins.
+      </div>
+      <div class="exercise">
+        <div class="exercise-title"><span class="ex-badge">Grammar</span> Rewrite in the passive voice.</div>
+        <ol class="q-list">
+          <li>Geologists conduct seismic surveys to map underground formations.<br>→ <span class="answer-line" style="min-width:380px;">______________________________________</span></li>
+          <li>Engineers installed subsea equipment at a depth of 1,500 metres.<br>→ <span class="answer-line" style="min-width:380px;">______________________________________</span></li>
+          <li>The company will decommission the platform over the next three years.<br>→ <span class="answer-line" style="min-width:380px;">______________________________________</span></li>
+          <li>Workers apply EOR techniques to ageing reservoirs to boost production.<br>→ <span class="answer-line" style="min-width:380px;">______________________________________</span></li>
+        </ol>
+      </div>
+
+      <h3>Extended Writing — Professional Briefing Note</h3>
+      <div class="callout callout-tip">
+        <div class="callout-title">Writing Task (200–250 words)</div>
+        You work for an energy consultancy. A client unfamiliar with the oil industry has asked for a briefing note explaining:
+        <ul style="margin-top:8px;">
+          <li>What an offshore oil platform is and what it does</li>
+          <li>The main phases of a well's life cycle (briefly)</li>
+          <li>At least TWO key safety or environmental considerations</li>
+        </ul>
+        Use <strong>formal register</strong>, passive constructions where appropriate, and at least <strong>6 technical terms</strong> from this lesson. Structure: <em>Purpose / Background / Key Points / Conclusion</em>.
+      </div>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div id="b2l2-answerkey">
+    <div class="answer-key-header">✦ Teacher's Answer Key — B2 Lesson 2</div>
+    <div class="answer-key-body">
+
+      <h3>Exercise A — Technical Definitions</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Definition</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Floating vessel producing/storing/offloading oil</td><td class="ans-answer">FPSO (Floating Production, Storage and Offloading)</td></tr>
+          <tr><td>2</td><td>Drilled hole from surface to reservoir</td><td class="ans-answer">wellbore</td></tr>
+          <tr><td>3</td><td>Safety valve sealing a well in emergency</td><td class="ans-answer">blowout preventer (BOP)</td></tr>
+          <tr><td>4</td><td>Techniques to recover more oil after primary decline</td><td class="ans-answer">EOR (Enhanced Oil Recovery)</td></tr>
+          <tr><td>5</td><td>Closing down and dismantling a platform</td><td class="ans-answer">decommissioning</td></tr>
+          <tr><td>6</td><td>Equipment separating oil, gas, and water</td><td class="ans-answer">production separator</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise B — Collocations</h3>
+      <table class="ans-table">
+        <thead><tr><th>Verb</th><th>Correct noun</th></tr></thead>
+        <tbody>
+          <tr><td>1. drill</td><td class="ans-answer">c. a wellbore</td></tr>
+          <tr><td>2. install</td><td class="ans-answer">e. a subsea system</td></tr>
+          <tr><td>3. conduct</td><td class="ans-answer">b. wireline logging</td></tr>
+          <tr><td>4. perform</td><td class="ans-answer">d. a workover</td></tr>
+          <tr><td>5. prevent</td><td class="ans-answer">a. a blowout</td></tr>
+          <tr><td>6. complete</td><td class="ans-answer">f. a well</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise C — Register &amp; Formality</h3>
+      <table class="ans-table">
+        <thead><tr><th>Informal</th><th>Formal / Technical</th></tr></thead>
+        <tbody>
+          <tr><td>"They poked a hole in the seabed"</td><td class="ans-answer">A wellbore was drilled into the seabed / An exploration well was spudded offshore.</td></tr>
+          <tr><td>"They cleaned up the well and got it working"</td><td class="ans-answer">A workover operation was performed to restore production from the well.</td></tr>
+          <tr><td>"The gas is poisonous and can explode"</td><td class="ans-answer">The well contains hydrogen sulphide (H₂S), a highly toxic and explosive gas present in sour reservoirs.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Oil Journey — Flow Diagram</h3>
+      <table class="ans-table">
+        <thead><tr><th>Step</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>Step 1</td><td class="ans-answer">Locate oil (seismic survey / exploration drilling)</td></tr>
+          <tr><td>Step 2</td><td class="ans-answer">Drill the well (wellbore)</td></tr>
+          <tr><td>Step 3</td><td class="ans-answer">Extract crude oil (pump to surface)</td></tr>
+          <tr><td>Step 4</td><td class="ans-answer">Transport (pipeline / ship / rail / truck)</td></tr>
+          <tr><td>Step 5</td><td class="ans-answer">Refine into petroleum products (gasoline, diesel, jet fuel…)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Natural Gas Infrastructure Chain</h3>
+      <table class="ans-table">
+        <thead><tr><th>Gap</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>Small collection pipes</td><td class="ans-answer">gathering lines</td></tr>
+          <tr><td>Main transport pipes</td><td class="ans-answer">feeder pipelines</td></tr>
+          <tr><td>Long-distance shipping</td><td class="ans-answer">LNG tankers (Liquefied Natural Gas)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Life Cycle Comprehension</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Why is exploration risky?</td><td class="ans-answer">Only ~1 in 10 exploration wells finds a commercial discovery; huge capital investment for uncertain returns.</td></tr>
+          <tr><td>2</td><td>BOP purpose / failure</td><td class="ans-answer">Seals the well to prevent blowout. If it fails: uncontrolled release → explosion, spill, casualties (Deepwater Horizon).</td></tr>
+          <tr><td>3</td><td>Why EOR is increasingly important</td><td class="ans-answer">As older fields mature, natural pressure declines; EOR sustains output from existing infrastructure without drilling new wells.</td></tr>
+          <tr><td>4</td><td>Challenges of decommissioning</td><td class="ans-answer">Remote/deep locations, enormous cost, hazardous materials disposal, strict regulations, protecting marine ecosystems.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Passive Voice Exercise</h3>
+      <table class="ans-table">
+        <thead><tr><th>#</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="ans-answer">Seismic surveys are conducted (by geologists) to map underground formations.</td></tr>
+          <tr><td>2</td><td class="ans-answer">Subsea equipment was installed at a depth of 1,500 metres.</td></tr>
+          <tr><td>3</td><td class="ans-answer">The platform will be decommissioned over the next three years.</td></tr>
+          <tr><td>4</td><td class="ans-answer">EOR techniques are applied to ageing reservoirs to boost production.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-tip" style="margin-top:20px;">
+        <div class="callout-title">Marking Guidance — Briefing Note</div>
+        <strong>Content (40%):</strong> All three bullet points addressed — platform function, life cycle, safety/environment.<br>
+        <strong>Language (30%):</strong> Formal register, appropriate passives, no informal language.<br>
+        <strong>Vocabulary (20%):</strong> At least 6 technical terms used accurately.<br>
+        <strong>Structure (10%):</strong> Clear Purpose / Background / Key Points / Conclusion.<br><br>
+        <strong>Key terms to expect:</strong> wellbore, BOP, FPSO, production separator, decommissioning, EOR, subsea system, H₂S, flow assurance, wireline logging.<br><br>
+        <strong>Common errors:</strong> Overuse of first person · Missing passives · Informal vocabulary · Poor cohesion.
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════ -->
+<script>
+  const lessons = ['b1', 'b2l1', 'b2l2'];
+
+  function showHome() {
+    document.getElementById('home').classList.remove('hidden');
+    lessons.forEach(id => document.getElementById('lesson-' + id).classList.remove('active'));
+    document.querySelectorAll('.topbar-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-home').classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  function showLesson(id) {
+    document.getElementById('home').classList.add('hidden');
+    lessons.forEach(lid => {
+      document.getElementById('lesson-' + lid).classList.toggle('active', lid === id);
+    });
+    document.querySelectorAll('.topbar-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  // Sticky section nav highlight within each lesson
+  window.addEventListener('scroll', () => {
+    const activeLesson = lessons.find(id => document.getElementById('lesson-' + id).classList.contains('active'));
+    if (!activeLesson) return;
+    const lessonEl = document.getElementById('lesson-' + activeLesson);
+    const navItems = lessonEl.querySelectorAll('.nav-item');
+    const sections = lessonEl.querySelectorAll('[id]');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navItems.forEach(n => {
+      const href = n.getAttribute('href');
+      n.classList.toggle('active', href && '#' + current === href);
+    });
+  });
+</script>
+</body>
+</html>
